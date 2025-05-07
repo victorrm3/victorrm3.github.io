@@ -31,9 +31,11 @@ const Hero = () => {
       <div className="container relative z-10 px-4 text-center">
         <div className="mb-8 flex justify-center">
           <div className="w-32 h-32 md:w-40 md:h-40 border-4 border-pixel-blue bg-pixel-darkBlue rounded-none overflow-hidden relative">
-            <div className="absolute inset-0 flex items-center justify-center text-6xl">
-              {''}
-            </div>
+          <img 
+              src="/src/images/v.png" 
+              alt="Víctor Rico Martínez" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
         

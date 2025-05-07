@@ -1,7 +1,10 @@
 
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -9,28 +12,49 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({ name: '', email: '', message: '' });
+    try {
+      // Reemplaza estos valores con tus credenciales de EmailJS
+      const serviceId = 'service_google';
+      const templateId = 'template_0k3wndi';
+      const userId = '6Oy0dobYRA9Vlr6Ww';
       
-      // Reset the submission status after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+      const templateParams = {
+        from_name: formState.name,
+        from_email: formState.email,
+        to_name: 'Víctor',
+        message: formState.message
+      };
+      
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+      
+      toast({
+        title: "¡Mensaje enviado!",
+        description: "Me pondré en contacto contigo pronto.",
+        variant: "default"
+      });
+      
+      // Limpiar el formulario
+      setFormState({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error al enviar el mensaje:', error);
+      toast({
+        title: "Error al enviar",
+        description: "No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -78,55 +102,48 @@ const Contact = () => {
             <div>
               <h3 className="font-pixel text-lg text-pixel-lightBlue mb-6">Envíame un Mensaje</h3>
               
-              {isSubmitted ? (
-                <div className="pixel-card bg-pixel-green text-pixel-white">
-                  <p className="font-pixel text-sm">¡Mensaje enviado correctamente!</p>
-                  <p className="font-pixelated mt-2">Me pondré en contacto contigo pronto.</p>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Nombre"
+                    value={formState.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full bg-pixel-darkGray border-2 border-pixel-gray p-3 text-pixel-white font-pixelated"
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Nombre"
-                      value={formState.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-pixel-darkGray border-2 border-pixel-gray p-3 text-pixel-white font-pixelated"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      value={formState.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-pixel-darkGray border-2 border-pixel-gray p-3 text-pixel-white font-pixelated"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <textarea
-                      name="message"
-                      placeholder="Mensaje"
-                      rows={5}
-                      value={formState.message}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-pixel-darkGray border-2 border-pixel-gray p-3 text-pixel-white font-pixelated resize-none"
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`pixel-btn bg-pixel-blue w-full ${isSubmitting ? 'opacity-50' : ''}`}
-                  >
-                    {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
-                  </button>
-                </form>
-              )}
+                <div className="mb-4">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formState.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full bg-pixel-darkGray border-2 border-pixel-gray p-3 text-pixel-white font-pixelated"
+                  />
+                </div>
+                <div className="mb-4">
+                  <textarea
+                    name="message"
+                    placeholder="Mensaje"
+                    rows={5}
+                    value={formState.message}
+                    onChange={handleChange}
+                    required
+                    className="w-full bg-pixel-darkGray border-2 border-pixel-gray p-3 text-pixel-white font-pixelated resize-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`pixel-btn bg-pixel-blue w-full ${isSubmitting ? 'opacity-50' : ''}`}
+                >
+                  {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                </button>
+              </form>
             </div>
           </div>
         </div>
