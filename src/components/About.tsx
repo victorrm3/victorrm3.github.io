@@ -13,9 +13,9 @@ const About = () => {
           <div className="pixel-card">
             <div className="space-y-6 text-xl font-pixelated">
               <p>
-                Soy un desarrollador web full stack apasionado por crear experiencias digitales 
-                atractivas y funcionales. Mi formación en <span className="text-pixel-yellow">Desarrollo de Aplicaciones Web (DAW)</span> 
-                me ha proporcionado una base sólida en el desarrollo tanto de frontend como backend.
+                Soy un desarrollador web full stack motivado por crear aplicaciones web 
+                atractivas y funcionales para los usuarios. Mi formación en <span className="text-pixel-yellow">Desarrollo de Aplicaciones Web (DAW) </span> 
+                en el IES ENRIC VALOR de Mónovar me ha proporcionado conocimientos en el desarrollo tanto de frontend como backend.
               </p>
               
               <p>
@@ -26,7 +26,8 @@ const About = () => {
                 <span className="text-pixel-skyBlue"> Python</span>, 
                 <span className="text-pixel-purple"> PHP</span> y 
                 <span className="text-pixel-red"> Laravel</span>, 
-                siempre buscando soluciones eficientes para desafíos técnicos complejos.
+                siempre buscando soluciones eficientes para desafíos técnicos complejos. Sin embargo, también he desarollado aplicaciones en dipositivos móviles utilizando 
+                <span className="text-pixel-lightBlue"> React Native</span> y<span className="text-pixel-orange"> Java</span>, lo que me ha permitido adquirir conocimientos en el desarrollo de aplicaciones multiplataforma.
               </p>
               
               <p>
@@ -36,8 +37,8 @@ const About = () => {
               </p>
               
               <p>
-                Mi enfoque es crear aplicaciones robustas, escalables y con interfaces de usuario intuitivas que 
-                brinden una excelente experiencia al usuario final.
+                Mi objetivo es crear aplicaciones útiles, escalables y con interfaces de usuario sencillas que 
+                proporcionen una buena experiencia al usuario final.
               </p>
             </div>
           </div>

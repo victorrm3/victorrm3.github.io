@@ -32,13 +32,13 @@ const Hero = () => {
         <div className="mb-8 flex justify-center">
           <div className="w-32 h-32 md:w-40 md:h-40 border-4 border-pixel-blue bg-pixel-darkBlue rounded-none overflow-hidden relative">
             <div className="absolute inset-0 flex items-center justify-center text-6xl">
-              {'</>'}
+              {''}
             </div>
           </div>
         </div>
         
         <h1 className="text-xl md:text-3xl mb-4 text-pixel-skyBlue font-pixel">
-          ¡Hola, Mundo!
+          Víctor Rico Martínez
         </h1>
         
         <h2 className="text-2xl md:text-4xl mb-8 text-pixel-yellow font-pixel animate-pixel-float">

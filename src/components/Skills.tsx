@@ -33,7 +33,7 @@ const SkillBar: React.FC<SkillProps> = ({ name, level, color }) => {
 
 const Skills = () => {
   const frontendSkills: SkillProps[] = [
-    { name: 'HTML/CSS', level: 9, color: 'bg-pixel-red' },
+    { name: 'HTML/CSS', level: 10, color: 'bg-pixel-red' },
     { name: 'JavaScript', level: 8, color: 'bg-pixel-yellow' },
     { name: 'React', level: 8, color: 'bg-pixel-lightBlue' },
     { name: 'Responsive', level: 9, color: 'bg-pixel-purple' },
@@ -42,15 +42,15 @@ const Skills = () => {
   const backendSkills: SkillProps[] = [
     { name: 'Java', level: 8, color: 'bg-pixel-orange' },
     { name: 'PHP/Laravel', level: 7, color: 'bg-pixel-red' },
-    { name: 'Python', level: 7, color: 'bg-pixel-skyBlue' },
+    { name: 'Python', level: 5, color: 'bg-pixel-skyBlue' },
     { name: 'MySQL', level: 8, color: 'bg-pixel-blue' },
   ];
 
   const serverSkills: SkillProps[] = [
-    { name: 'Apache', level: 7, color: 'bg-pixel-lightGreen' },
+    { name: 'Apache', level: 5, color: 'bg-pixel-lightGreen' },
     { name: 'Nginx', level: 6, color: 'bg-pixel-green' },
-    { name: 'Git', level: 8, color: 'bg-pixel-orange' },
-    { name: 'Docker', level: 6, color: 'bg-pixel-blue' },
+    { name: 'Git', level: 10, color: 'bg-pixel-orange' },
+    { name: 'Docker', level: 5, color: 'bg-pixel-blue' },
   ];
 
   return (

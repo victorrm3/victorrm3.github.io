@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="font-pixel text-sm text-pixel-yellow">DEV_PORTFOLIO</h3>
+            <h3 className="font-pixel text-sm text-pixel-yellow">Desarrollador</h3>
           </div>
           
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
@@ -30,7 +30,7 @@ const Footer = () => {
         
         <div className="text-center">
           <p className="text-pixel-gray font-pixelated text-sm">
-            © {new Date().getFullYear()} • Desarrollado con <span className="text-pixel-red">♥</span> y pixeles
+            © {new Date().getFullYear()} • Desarrollado por Víctor Rico Martínez
           </p>
         </div>
       </div>

@@ -47,11 +47,11 @@ const Contact = () => {
               <div className="space-y-6 font-pixelated">
                 <p className="flex items-start space-x-3">
                   <span className="text-pixel-yellow">@</span>
-                  <span>email@dominio.com</span>
+                  <span>victoricomar3@gmail.com</span>
                 </p>
                 <p className="flex items-start space-x-3">
                   <span className="text-pixel-yellow">☎</span>
-                  <span>+34 600 000 000</span>
+                  <span>+34 633 56 80 85</span>
                 </p>
                 <p className="flex items-start space-x-3">
                   <span className="text-pixel-yellow">⌂</span>
@@ -61,13 +61,13 @@ const Contact = () => {
                 <div className="pt-4">
                   <h4 className="font-pixel text-sm text-pixel-skyBlue mb-4">Redes Sociales</h4>
                   <div className="flex space-x-4">
-                    <a href="#" className="text-pixel-lightGray hover:text-pixel-skyBlue transition-colors">
-                      GitHub
+                    <a href="https://www.instagram.com/victor_rm3/" className="text-pixel-lightGray hover:text-pixel-skyBlue transition-colors" target='_blank'>
+                      Instagram
                     </a>
-                    <a href="#" className="text-pixel-lightGray hover:text-pixel-skyBlue transition-colors">
+                    <a href="https://www.linkedin.com/in/v%C3%ADctor-rico-868b69329/" className="text-pixel-lightGray hover:text-pixel-skyBlue transition-colors" target='_blank'>
                       LinkedIn
                     </a>
-                    <a href="#" className="text-pixel-lightGray hover:text-pixel-skyBlue transition-colors">
+                    <a href="https://x.com/victor_rm3" className="text-pixel-lightGray hover:text-pixel-skyBlue transition-colors" target='_blank'>
                       Twitter
                     </a>
                   </div>

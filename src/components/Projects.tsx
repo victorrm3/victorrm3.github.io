@@ -27,29 +27,17 @@ const Project: React.FC<ProjectProps> = ({ title, description, techStack, bgColo
 const Projects = () => {
   const projects: ProjectProps[] = [
     {
-      title: "Sistema de Gestión Académica",
-      description: "Plataforma web para administración de estudiantes, cursos y calificaciones con panel administrativo.",
-      techStack: ["Java", "Spring Boot", "MySQL", "JavaScript", "Bootstrap"],
+      title: "Sistema de Gestión Fichajes",
+      description: "Plataforma web para administración de fichajes de empleados con panel administrativo.",
+      techStack: ["TypeScript", "HTML/CSS", "MySQL", "React", "PHP"],
       bgColor: "bg-pixel-darkBlue"
     },
     {
-      title: "E-commerce Responsivo",
-      description: "Tienda online completa con catálogo, carrito, pasarela de pagos y panel de administración.",
-      techStack: ["PHP", "Laravel", "MySQL", "React", "Tailwind CSS"],
-      bgColor: "bg-pixel-purple"
-    },
-    {
-      title: "API RESTful de Gestión",
-      description: "API para integración con aplicaciones de gestión empresarial con autenticación OAuth.",
-      techStack: ["Python", "Django", "PostgreSQL", "Docker"],
-      bgColor: "bg-pixel-green"
-    },
-    {
-      title: "Aplicación de Análisis de Datos",
-      description: "Dashboard interactivo para visualización y análisis de datos empresariales.",
-      techStack: ["React", "Node.js", "D3.js", "MongoDB"],
+      title: "Sistema de Gestión de Pedidos Almacén",
+      description: "Plataforma web para administración de pedidos y stock de productos.",
+      techStack: ["JavaScript", "HTML/CSS", "MySQL", "PHP"],
       bgColor: "bg-pixel-red"
-    }
+    },
   ];
 
   return (

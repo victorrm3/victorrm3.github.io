@@ -9,7 +9,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 px-4 py-2 bg-pixel-dark border-b-4 border-pixel-darkGray">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-xl md:text-2xl text-pixel-yellow font-pixel">DEV_PORTFOLIO</h1>
+          <h1 className="text-xl md:text-2xl text-pixel-yellow font-pixel">¡Hola, mundo!</h1>
         </div>
         
         <div className="md:hidden">
